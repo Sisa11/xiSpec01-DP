@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{40330F13-1515-4D94-9165-D9B66699E6AE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>xiSpec01</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="xiApi.NET">
+      <HintPath>D:\XispecBeat\NEW\xiSpec01-Beta\xiApi.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Cyotek.Windows.Forms.ImageBox">
+      <HintPath>D:\XispecBeat\NEW\xiSpec01-Beta\Cyotek.Windows.Forms.ImageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\XispecBeat\NEW\xiSpec01-Beta\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="BitMiracle.LibTiff.NET">
+      <HintPath>D:\XispecBeat\NEW\xiSpec01-Beta\BitMiracle.LibTiff.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="xiSpec01.Properties\Resources.cs" />
+    <Compile Include="xiSpec01.Properties\Settings.cs" />
+    <Compile Include="xiSpec01\Camera.cs" />
+    <Compile Include="xiSpec01\CamParameters.cs" />
+    <Compile Include="xiSpec01\DemoImageFile.cs" />
+    <Compile Include="xiSpec01\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xiSpec01\FormDistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xiSpec01\FormFilterResponse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xiSpec01\HSIImage.cs" />
+    <Compile Include="xiSpec01\HSIParameters.cs" />
+    <Compile Include="xiSpec01\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xiSpec01\Form1.resx" />
+    <EmbeddedResource Include="xiSpec01\FormDistance.resx" />
+    <EmbeddedResource Include="xiSpec01\FormFilterResponse.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
